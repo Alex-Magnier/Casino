@@ -4,7 +4,7 @@
 
 ### Liste des idées globales en details du projet
 
-Outils possible à utiliser :
+* Outils possible à utiliser :
     * __TKinter__ ou version __WEB__ avec __HTML5__ et __CSS3__
     * __Python__
     * __VS Code__
