@@ -1,6 +1,6 @@
 <img src="/casino.png" width="200" alt="Texte alternatif">
 
-# Casino
+# Roulex Casino
 
 ### Liste des idées globales en details du projet
 
