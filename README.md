@@ -29,6 +29,28 @@ Premier lancement :
 
 ```Faire un fichier qui ouvre une documentation HTML5, CSS3 ou une page dédié si interface WEB direct avec toutes les régles des jeux, les mentions, remerciements et d'autres choses comme des sources etc...```
 
+
+## Exemple pour l'arborescence (pas la même si interface WEB HTML5 CSS3)
+
+        casino/
+        ├── main.py                  # Fichier principal : lance le menu
+        ├── menu.py                  # affichage du menu pricipal avec choix (Boutique, Jouer, Paramètres etc..)
+        ├── profil.py                # création / chargement / sauvegarde       du profil
+        ├── README.md                # Présentation
+        │
+        ├── jeux/
+        │   ├── roulette.py
+        │   ├── pile_ou_face.py
+        │   ├── blackjack.py
+        │   ├── machine_a_sous.py
+        │   ├── devine_le_nombre.py
+        │
+        ├── utils/
+        │   └── cartes.py            # Paquet / Carte, partagé par      blackjack et autre jeu
+        │
+        └──  data/                    # sauvegardes (ignorées par Git)
+            └── profil.json
+
 # À compléter !
 
 ```By RouyouteDev & Alex.```
