@@ -7,7 +7,7 @@
 
 ## 1. Présentation du projet
 
-Roulex's Casino est un projet collaboratif 
+Roulex's Casino est un projet collaboratif étudiant ayant pour objectif de développer une plateforme de jeux de casino en ligne fonctionnant exclusivement avec une monnaie virtuelle.
 
 Le projet est réalisé dans un objectif pédagogique, afin de mettre en pratique le développement frontend, le développement backend et le design d'interface.
 
@@ -17,7 +17,7 @@ Aucun dépôt, retrait ou pari en argent réel ne sera possible.
 
 - **Frontend :** intégration HTML5, CSS3 et JavaScript.
 - **Backend :** Python avec Flask, gestion des utilisateurs, des profils et des mécaniques des jeux.
-- **UI/UX Design :** création des maquettes, de l'identité graphique et des composants visuels.
+- **UI/UX Design :** création des maquettes, de l'identité graphique et des composants visuels grâce à Figma.
 
 ## 2. Objectifs du design
 
@@ -29,16 +29,18 @@ Les principales émotions recherchées sont :
 - L'enthousiasme lors des parties.
 - Le prestige associé à l'univers des casinos.
 - La satisfaction liée à la progression et aux récompenses virtuelles.
+- L'addiction à la plateforme pour permettre de faire rester l'utilisateur.
 
-Le design devra rester clair, accessible et facile à utiliser, sans recourir à des mécanismes de pression, d'urgence artificielle ou d'incitation au jeu excessif.
+Le design devra rester clair, accessible et facile à utiliser.
 
 ## 3. Direction artistique
 
-**Style recherché :** Dark Mode, Gaming, Neon, Casino moderne.
+**Style recherché :** Dark Mode, Neon, Casino moderne. (Voir exemple tout en bas)
 
-L'interface doit privilégier un arrière-plan sombre, des surfaces légèrement contrastées, des accents violets et des éléments dorés.
+L'interface doit privilégier un arrière-plan sombre mais agréable pour les yeux, des surfaces légèrement contrastées, des accents violets et des éléments dorés, ne pas hesiter a s'inspirer des modéles joints.
 
-### Palette indicative
+### Palette indicative 
+Au choix ceci est un simple exemple
 
 | Couleur | Code HEX | Utilisation |
 |---|---|---|
@@ -51,7 +53,7 @@ L'interface doit privilégier un arrière-plan sombre, des surfaces légèrement
 | Blanc | #F8F8FA | Texte principal |
 | Gris clair | #A1A1AA | Texte secondaire |
 
-La palette pourra être affinée par le designer, tout en conservant une identité cohérente avec le logo existant.
+La palette pourra être affinée par le designer, tout en conservant une identité cohérente avec le logo qui sera crée.
 
 ### Typographies
 
@@ -97,7 +99,7 @@ Présentation des différents jeux sous forme de cartes :
 - Blackjack (à venir).
 - Machines à sous (évolution possible).
 
-Chaque carte devra disposer d'un titre, d'une illustration, d'une brève description et d'un indicateur de disponibilité.
+Chaque carte devra disposer d'un titre, d'une illustration, d'une brève description et d'un indicateur de disponibilité. Comme une vraie carte.
 
 ### Interface de jeu
 
@@ -153,19 +155,17 @@ Le designer devra créer des composants cohérents et réutilisables :
 - Jetons virtuels.
 - Écrans de résultat : victoire, défaite et égalité.
 
-Prévoir les états normal, survol, focus, actif et désactivé lorsque nécessaire.
+Prévoir les états normal, survol, focus, actif et désactivé lorsque nécessaire. (Optionnel mais si possible c'est mieux)
 
 ## 6. Responsive design
 
-Le site devra être pensé en priorité pour ordinateur, tout en disposant d'une adaptation aux écrans plus petits.
+Le site devra être pensé en priorité pour ordinateur, une version pour écrans mobiles sera à venir pour plustard
 
 Maquettes demandées :
 
 - Desktop : 1440 px.
-- Tablette : 768 px.
-- Mobile : 390 px.
 
-L'interface doit rester lisible et fonctionnelle quelle que soit la taille de l'écran.
+L'interface doit rester lisible sans que les éléments soient les uns sur les autres et fonctionnelle quelle que soit la taille de l'écran.
 
 ## 7. Animations et interactions
 
@@ -184,7 +184,7 @@ Le frontend sera réalisé principalement en HTML5 et CSS3, puis enrichi avec Ja
 
 Le backend utilisera Python et Flask.
 
-Les maquettes devront donc privilégier des interfaces réalisables avec ces technologies, sans dépendance obligatoire à des frameworks frontend complexes.
+La maquette devra donc pouvoir être réalisable avec ces langages, si un il y a un doute ne pas hesiter a demander
 
 ## 9. Livrables attendus
 
@@ -197,9 +197,8 @@ Le designer devra fournir :
 5. Une maquette de connexion et d'inscription.
 6. Une maquette de profil.
 7. Une maquette de leaderboard.
-8. Les variantes responsive des principales pages.
-9. Les icônes et illustrations originales ou libres d'utilisation.
-10. Les spécifications utiles à l'intégration HTML/CSS.
+8. Les icônes et illustrations originales ou libres d'utilisation.
+9. Les spécifications utiles à l'intégration HTML/CSS.
 
 ## 10. Critères de validation
 
@@ -220,3 +219,12 @@ La référence principale est le template casino fourni par l'équipe.
 Il sert d'inspiration pour la disposition des éléments, les cartes de jeux, la navigation et l'ambiance graphique.
 
 L'objectif reste de créer une identité originale pour Roulex's Casino.
+
+![Description](https://cdn.discordapp.com/attachments/1549197233092825119/1564729493921206362/image.png?ex=6ae25366&is=6ae101e6&hm=bbff8c9312947e86e260eaccf7f57d8ce83ebf745f39ee7d075055efc6e38d84&)
+
+![Description] (https://www.behance.net/gallery/251954225/Casino-Website-Gambling-Platform)
+
+
+![Description](https://cdn.discordapp.com/attachments/1549197233092825119/1564729753393561773/image.png?ex=6ae253a4&is=6ae10224&hm=e39d24677e57a3d0f0089b213ae7ddfb2c19df017c545171a603b5ed0681b6f3&)
+
+![Description](https://cdn.discordapp.com/attachments/1549197233092825119/1564730277207744523/1000_F_1935630961_zZx4dnRGaWcL6yPRnz3L2Ka3JAzzkZA5.png?ex=6ae25421&is=6ae102a1&hm=75cf502484f602bcb9ca51b9443485e2f8e7b2f3a5742a2859c4fc3556b7cde0&)
