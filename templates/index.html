@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     
     <meta property="og:title" content="Roulex's Casino">
@@ -17,47 +17,77 @@
 </head>
 <body>
     <header>
-        <figure>
-            <img src="../static/imgs/casino.png" alt="Roulex's Casino Logo">
-        </figure>
-        <h1>Roulex's Casino</h1>
+        <div>
+            <figure>
+                <a href="index.html"><img src="../static/imgs/casino.png" alt="Roulex's Casino Logo"></a>
+            </figure>
+            <h1>Roulex's Casino</h1>
+        </div>
         <nav>
             <ul>
-                <li><a>Leaderboard</a></li>
-                <li><a>Games</a></li>
-                <li><a>Profile</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="settings.html">Settings</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="connexion">
-            <form id="login-form" action="/login" method="post">
-                <fieldset>
-                    <legend>Login</legend>
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" required>
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
-                    <button type="submit">Login</button>
-                </fieldset>
-            </form>
-        </section>
-        <section id="enregistrer">
-            <form id="register-form" action="/register" method="post">
-                <fieldset>
-                    <legend>Register</legend>
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" required>
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
-                    <button type="submit">Register</button>
-                </fieldset>
-            </form>
-        </section>
+        <div id="first-section">
+            <div id="forms">
+                <section id="connexion">
+                    <form id="login-form" action="/login" method="post">
+                        <fieldset>
+                            <legend>Login</legend>
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" required>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                            <button type="submit">Login</button>
+                        </fieldset>
+                    </form>
+                </section>
+                <!-- NE TOUCHEZ PAS AUX ATTRIBS DE CETTE SECTION, LE BACKEND EN AS BESOIN -->
+                <section id="enregistrer"> 
+                    <form id="register-form" action="/" method="POST">
+                        <fieldset>
+                            <legend>Register</legend>
+                            <label for="username-register">Username:</label>
+                            <input type="text" id="username-register" name="username_register" required>
+                            
+                            <label for="password-register">Password:</label>
+                            <input type="password" id="password-register" name="password_register" required>
+                            
+                            <button type="submit">Register</button>
+                        </fieldset>
+                        {% if nom %}
+                            <div style="float:left;">
+                                <p>incription réussie, <strong>{{ nom }}</strong> !</p>
+                            </div>
+                        {% endif %}
+                    </form>
+                </section>
+            </div>
+            <div id="leader-board">
+                <h2>Leaderboard</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Username</th>
+                            <th>Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body">
+                        <!-- Leaderboard à venir par la suite -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </main>
     <footer>
-        <p><a href="https://github.com/Alex-Magnier/casino/tree/main">2026 Roulex's Casino</a>. Side project by <a href="https://github.com/RouyouteDev">Rouyoute</a> and <a href="https://github.com/Alex-Magnier">Alex</a>, both student in <a href="https://lamanu.fr/">La Manu</a>.</p>
         <p id="disclaimer">Gambling and games of chance can be dangerous: financial losses, family conflicts, addiction… If you have a problem with gambling, please contact a professional for help.</p>
+        <p><a href="https://github.com/Alex-Magnier/casino/tree/main">2026 Roulex's Casino</a>. Side project by <a href="https://github.com/RouyouteDev">Rouyoute</a> and <a href="https://github.com/Alex-Magnier">Alex</a>, both student in <a href="https://lamanu.fr/">La Manu</a>.</p>
     </footer>
 </body>
 </html>
