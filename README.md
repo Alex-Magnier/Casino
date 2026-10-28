@@ -54,4 +54,4 @@ Premier lancement :
 
 # À compléter !
 
-```By RouyouteDev & Alex.```
+```By RouyouteDev, Alex., Wattgab, Maelyneagnrl```
