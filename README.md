@@ -1,6 +1,7 @@
-<img src="/casino.png" width="200" alt="Texte alternatif">
+<img src="/static/imgs/casino.png" width="200" alt="Texte alternatif">
 
-# Roulex Casino
+# Roulex Casino V0.1
+# INFORMATION : Le design et les mises en pages actuelles sont temporraires et en attente d'un design
 
 ### Liste des idées globales en details du projet
 

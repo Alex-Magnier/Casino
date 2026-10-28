@@ -15,6 +15,7 @@
     <link rel="icon" type="image/x-icon" href="../static/imgs/casino.png">
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
+<!-- INFORMATION : Cette page est temporraire elle sera remplacé par le design final version actuelle v0.1 -->
 <body>
     <header>
         <div>
@@ -34,6 +35,20 @@
         </nav>
     </header>
     <main>
+        <a href="newgame.html"> <!-- Le jeu sera à venir par la suite lorsque l'on cliquera sur la case du jeu peut importe ou le jeu se lancera dans une nouvelle page -->
+            <div id="new-game-container">
+                <img src="../static/imgs/newgame.png" alt="New Game" id="new-game-button">
+                <p>This is the name of the game</p>
+            </div>
+        </a>
+        <div id="game-container"> <!-- cette section contiendra une liste de jeu scollable horizontallement, lorsque l'on clique de sur le jeu il s'ouvre dans une nouvelle page -->
+            <a href="game1.html">
+                <div class="game-card">
+                    <img src="../static/imgs/game1.png" alt="Game 1">
+                    <p>Game 1</p>
+                </div>
+            </a>
+        </div>
     </main>
     <footer>
         <p id="disclaimer">This Website is for educational purposes only. Do not gamble with real money.</p>

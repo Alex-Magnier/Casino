@@ -1,3 +1,4 @@
+/* INFORMATION : Ce fichier contient le style CSS de toutes les pages du site il est entierement valable seulement pour la version actuelle v0.1 */
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
 
@@ -94,6 +95,8 @@ main {
     gap: 50px;
 }
 
+/* Section formulaire pour se connecter à son compte */
+
 #forms {
     display: flex;
     flex-direction: column;
@@ -161,6 +164,7 @@ fieldset button:hover {
     border-color: #9172ff;
 }
 
+/* Leaderboard seulement sur la premiere page et peut etre à l'avenir un leaderboard pour chaque jeu */
 #leader-board {
     flex: 1;
     min-width: 0;
@@ -196,6 +200,8 @@ fieldset button:hover {
 #leader-board td {
     font-weight: 400;
 }
+
+/* Section footer, identique à chaques pages */
 
 footer {
     display: flex;

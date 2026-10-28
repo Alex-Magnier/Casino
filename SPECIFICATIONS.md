@@ -22,7 +22,7 @@ Aucun dépôt, retrait ou pari en argent réel ne sera possible.
 ## 2. Objectifs du design
 
 L'interface devra proposer une expérience visuelle moderne et immersive, inspirée des plateformes de jeux et de l'univers graphique des casinos.
-
+<!-- INFORMATION : Cette page est temporraire elle sera remplacé par le design final version actuelle v0.1 -->
 Les principales émotions recherchées sont :
 
 - Le divertissement et l'amusement.
