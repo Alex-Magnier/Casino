@@ -26,15 +26,17 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="{{url_for('index')}}">Home</a></li>
                 <li><a href="games.html">Games</a></li>
-                <li><a href="profile.html" class="active">Profile</a></li>
+                <li><a href="{{url_for('profile')}}" class="active">Profile</a></li> 
                 <li><a href="documentation.html">Documentation</a></li>
                 <li><a href="settings.html">Settings</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        {{ pseudo }}
+        {{ coin }}
     </main>
     <footer>
         <p id="disclaimer">This Website is for educational purposes only. Do not gamble with real money.</p>
