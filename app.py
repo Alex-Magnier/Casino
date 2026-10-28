@@ -1,43 +1,39 @@
+# IMPORT DES 
+import login_py, register_py, profile_py
 from flask import Flask, render_template, request
-import json
-import os
+
+CONST_USERNAME = None
+CONST_COIN = None
+
 
 app = Flask(__name__)
 
+
+
 @app.route("/", methods=["GET", "POST"])
 def index():
-    nom_affiche = None
+    return render_template("index.html")
 
-    if request.method == "POST":
-        username_reg = request.form.get("username_register")
-        password_reg = request.form.get("password_register")
-        new_user = {"username": username_reg, "password": password_reg}
-    
-        users = [] 
-        
-        basedir = os.path.abspath(os.path.dirname(__file__))
-        filepath = os.path.join(basedir, 'data', 'utilisateurs.json')
-        
-        if os.path.exists(filepath):
-            with open(filepath, "r", encoding="utf-8") as f:
-                try:
-                    users = json.load(f)
-                except json.JSONDecodeError:
-                    users = [] 
-        users.append(new_user)
 
-        with open(filepath, "w", encoding="utf-8") as f:
-            json.dump(users, f, ensure_ascii=False, indent=4)
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    return register_py.register_func()
 
-        if username_reg:
-            print(f"\n--- Données enregistrées dans : {filepath} ---")
-            print(f"Username : {username_reg}")
-            print(f"Password : {password_reg}")
-            print("-----------------------------------------------\n")
 
-            nom_affiche = username_reg
-            
-    return render_template("index.html", nom=nom_affiche)
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    temp = login_py.login_func()
+    global CONST_COIN
+    global CONST_USERNAME
+    CONST_USERNAME = temp[1]
+    CONST_COIN = temp[2]
+    return render_template("index.html", msg=temp[0], coin=CONST_COIN, username=CONST_USERNAME)
+
+
+@app.route("/profile", methods=["GET", "POST"])
+def profile():
+    return profile_py.profile_func(CONST_USERNAME, CONST_COIN)
+
 
 if __name__ == "__main__":
     app.run(debug=True)

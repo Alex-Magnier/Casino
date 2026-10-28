@@ -26,37 +26,39 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="games.html">Games</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="documentation.html">Documentation</a></li>
-                <li><a href="settings.html">Settings</a></li>
+                <li><a href="{{url_for('index')}}" class="active">Home</a></li>
+                <li><a href="{{url_for('profile')}}">Profile</a></li> 
             </ul>
         </nav>
     </header>
     <main>
         <div id="first-section">
             <div id="forms">
+                <!-- NE TOUCHEZ PAS AUX ATTRIBS DE CETTE SECTION, LE BACKEND EN AS BESOIN -->
                 <section id="connexion">
-                    <form id="login-form" action="/login" method="post">
+                    <form id="login-form" action="/login" method="POST">
                         <fieldset>
                             <legend>Login</legend>
-                            <label for="username">Username:</label>
-                            <input type="text" id="username" name="username" required>
-                            <label for="password">Password:</label>
-                            <input type="password" id="password" name="password" required>
+                            <label for="username_login">Username:</label>
+                            <input type="text" id="username_login" name="username_login" required>
+                            <label for="password_login">Password:</label>
+                            <input type="password" id="password_login" name="password_login" required>
                             <button type="submit">Login</button>
                         </fieldset>
+                        {% if msg %}
+                            <div style="float:left;">
+                                <p> <strong> {{msg}} </strong> logged in sucessfully !</p>
+                            </div>
+                        {% endif %}
                     </form>
                 </section>
                 <!-- NE TOUCHEZ PAS AUX ATTRIBS DE CETTE SECTION, LE BACKEND EN AS BESOIN -->
                 <section id="enregistrer"> 
-                    <form id="register-form" action="/" method="POST">
+                    <form id="register-form" action="/register" method="POST">
                         <fieldset>
                             <legend>Register</legend>
                             <label for="username-register">Username:</label>
                             <input type="text" id="username-register" name="username_register" required>
-                            
                             <label for="password-register">Password:</label>
                             <input type="password" id="password-register" name="password_register" required>
                             
@@ -64,7 +66,7 @@
                         </fieldset>
                         {% if nom %}
                             <div style="float:left;">
-                                <p>incription réussie, <strong>{{ nom }}</strong> !</p>
+                                <p>{{ nom }}</p>
                             </div>
                         {% endif %}
                     </form>

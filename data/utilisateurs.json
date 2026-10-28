@@ -1,6 +1,7 @@
 [
     {
-        "username": "utilisateur",
-        "password": "test"
+        "username": "tester",
+        "password": "test",
+        "coin": 100
     }
 ]
