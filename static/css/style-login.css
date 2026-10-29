@@ -1,0 +1,83 @@
+/* :root {
+
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: left;
+
+}
+
+header a img {
+    width: 20%;
+    height: auto;
+    margin-left: 20px;
+    margin-top: 20px;
+    background-color: #D9D9D9;
+}
+
+main {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main div {
+    background-color: #D9D9D9;
+    display: flex;
+    padding: 20px;
+    width: 25%;
+    border-radius: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+main form {
+    width: 100%;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+fieldset legend {
+    color: black;
+    font-size: 40px;
+}
+
+fieldset label {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+fieldset input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+
+fieldset button {
+    width: 20%;
+    padding: 5px;
+    align-self: flex-end;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+}

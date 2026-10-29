@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Ceci est une version de test avec un zoning pour pouvoir accueilir le futur design, il reprends le zoning du design en cours -->
+    <meta property="og:title" content="Roulex's Casino">
+    <meta property="og:description" content="Discover Roulex's Casino, the best online casino for you!">
+    <meta property="og:image" content="../static/imgs/casino.png">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0D1C42">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roulex's Casino</title>
+    <link rel="icon" type="image/x-icon" href="../static/imgs/casino.png">
+    <link rel="stylesheet" href="../static/css/style-login.css">
+</head>
+<body>
+    <header>
+        <a><img src="../static/imgs/casino.png" alt="Roulex's Casino Logo"></a>
+    </header>
+    <main>
+        <div>
+            <form method="POST" action="/login">
+                <fieldset>
+                    <legend>Login</legend>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username_login" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password_login" required>
+                    <button type="submit">Login</button>
+                </fieldset>
+                {% if msg %}
+                    <div class="message">
+                        <p> <strong> {{msg}} </strong></p>
+                    </div>
+                {% endif %}
+                <p>Don't have an account? <a href="{{ url_for('register_page')}}">Register here.</a></p>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

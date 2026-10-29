@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import logs
+from . import logs
 import json
 import os
 
@@ -12,7 +12,7 @@ def login_func():
         password_login = request.form.get("password_login")
         # RECUP LA LISTE DES USERS DANS LE JSON
         basedir = os.path.abspath(os.path.dirname(__file__))
-        filepath = os.path.join(basedir, 'data', 'utilisateurs.json')
+        filepath = os.path.join(basedir, ".." , 'data', 'utilisateurs.json')
 
 
         if os.path.exists(filepath):
@@ -29,7 +29,7 @@ def login_func():
                 msg = True
         if msg == True:
             logs.logs_func(f"{username_login} logged")
-            return "Loggin sucessfull", USERNAME, COIN
+            return f"Loggin sucessfull {username_login} !", USERNAME, COIN
         if msg == False:
             print(f"{username_login} failed !")
             return "Login failed, please try again.", None, None
