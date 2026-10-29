@@ -23,17 +23,17 @@
                 <fieldset>
                     <legend>Login</legend>
                     <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
+                    <input type="text" id="username" name="username_login" required>
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
+                    <input type="password" id="password" name="password_login" required>
                     <button type="submit">Login</button>
                 </fieldset>
                 {% if msg %}
                     <div class="message">
-                        <p> <strong> {{msg}} </strong> logged in sucessfully !</p>
+                        <p> <strong> {{msg}} </strong></p>
                     </div>
                 {% endif %}
-                <p>Don't have an account? <a href="register.html">Register here.</a></p>
+                <p>Don't have an account? <a href="{{ url_for('register_page')}}">Register here.</a></p>
             </form>
         </div>
     </main>
