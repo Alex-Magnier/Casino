@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import logs
+from . import logs
 import json
 import os
 
@@ -13,23 +13,33 @@ def register_func():
         # RECUP INFOS DU FORM REGISTER
         username_reg = request.form.get("username_register")
         password_reg = request.form.get("password_register")
-        new_user = {"username": username_reg, "password": password_reg, "coin":100}
+        name_reg = request.form.get("name_register")
+        age_reg = request.form.get("age_register")
+        new_user = {"username": username_reg, "password": password_reg, "name":name_reg, "coin":100}
         users = [] 
+
 
         # VERIFICATIONS DES DATAS
         basedir = os.path.abspath(os.path.dirname(__file__))
-        filepath = os.path.join(basedir, 'data', 'utilisateurs.json')
+        filepath = os.path.join(basedir, "..", 'data', 'utilisateurs.json')
         
         if os.path.exists(filepath):
             with open(filepath, "r", encoding="utf-8") as f:
                 try:
                     users = json.load(f)
                 except json.JSONDecodeError:
-                    users = [] 
+                    users = []
+
+        # VERIFIE SI LA CHECKBOX A ETE COCHEE SINON ENREGISTREMNET ANNULE, MESSAGE D ERREUR A L UTILISATEUR
+        if age_reg == "on":
+            pass
+        else:
+                return "register failed, you must be 18 year old"
+        
         # SI USERNAME DEJA PRIS ENREGISREMENT ANNULE, MESSAGE D ERREUR A L UTILISATEUR
         for elt in users:
             if username_reg in elt["username"]:
-                return render_template("index.html", nom="register failed, username already taken")
+                return "register failed, username already taken"
         users.append(new_user)
 
         with open(filepath, "w", encoding="utf-8") as f:
@@ -40,4 +50,4 @@ def register_func():
             logs.logs_func(f"{username_reg} registered")
             nom_affiche = username_reg
             
-    return render_template("index.html", nom=f"register complete {nom_affiche} !")
+    return f"register complete {nom_affiche}"

@@ -1,0 +1,57 @@
+---------------------- LIENS DE REDIRECTION ----------------------
+
+
+<a href="{{ url_for('login_page')}}"></a>  # REDIRECTION SUR login.html ## Ajouté sur la page login
+
+<a href="{{ url_for('register_page')}}">   # REDIRECTION SUR register.html ## Ajouté sur la page register
+
+<a href="{{ url_for('index')}}">INDEX</a>  # REDIRECTION SUR index.html
+
+
+---------------------- FORMULAIRE POUR LE REGISTER ---------------------- ## Ajouté --
+
+
+<form method="POST" action="/register">
+    <fieldset>
+        <legend>Register</legend>
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name_register" required>
+        <label for="username">Username *</label>
+        <input type="text" id="username" name="username_register" required>
+        <label for="password">Password *</label>
+        <input type="password" id="password" name="password_register" required>
+        <div class="checkbox-container">
+            <input type="checkbox" id="age" name="age_register" required>
+            <label name="age_register" for="age">I confirm that I am over 18 years old.</label>
+        </div>
+        <button type="submit">Register</button>
+        <p><a href="{{ url_for('login_page')}}">I already have an account.</a></p>
+    </fieldset>
+    {% if nom %}
+        <div class="message">
+            <p>{{ nom }}</p>
+        </div>
+    {% endif %}
+</form>
+
+
+---------------------- FORMULAIRE POUR LE LOGIN ---------------------- ## Ajouté --
+
+
+<form method="POST" action="/login">
+    <fieldset>
+        <legend>Login</legend>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username_login" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password_login" required>
+        <button type="submit">Login</button>
+    </fieldset>
+    {% if msg %}
+        <div class="message">
+            <p> <strong> {{msg}} </strong></p>
+        </div>
+    {% endif %}
+    <p>Don't have an account? <a href="{{ url_for('register_page')}}">Register here.</a></p>
+</form>
+

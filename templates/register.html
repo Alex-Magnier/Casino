@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Ceci est une version de test avec un zoning pour pouvoir accueilir le futur design, il reprends le zoning du design en cours -->
+    <meta property="og:title" content="Roulex's Casino">
+    <meta property="og:description" content="Discover Roulex's Casino, the best online casino for you!">
+    <meta property="og:image" content="../static/imgs/casino.png">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0D1C42">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roulex's Casino</title>
+    <link rel="icon" type="image/x-icon" href="../static/imgs/casino.png">
+    <link rel="stylesheet" href="../static/css/style-register.css">
+</head>
+<body>
+    <header>
+        <a><img src="../static/imgs/casino.png" alt="Roulex's Casino Logo"></a>
+    </header>
+    <main>
+        <div>
+            <form method="POST" action="/register">
+                <fieldset>
+                    <legend>Register</legend>
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name_register" required>
+                    <label for="username">Username *</label>
+                    <input type="text" id="username" name="username_register" required>
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password_register" required>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="age" name="age_register" required>
+                        <label name="age_register" for="age">I confirm that I am over 18 years old.</label>
+                    </div>
+                    <button type="submit">Register</button>
+                    <p><a href="{{ url_for('login_page')}}">I already have an account.</a></p>
+                </fieldset>
+                {% if nom %}
+                    <div class="message">
+                        <p>{{ nom }}</p>
+                    </div>
+                {% endif %}
+            </form>
+        </div>
+    </main>
+</body>
+</html>
