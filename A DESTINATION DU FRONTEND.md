@@ -1,14 +1,14 @@
 ---------------------- LIENS DE REDIRECTION ----------------------
 
 
-<a href="{{ url_for('login_page')}}"></a>  # REDIRECTION SUR login.html
+<a href="{{ url_for('login_page')}}"></a>  # REDIRECTION SUR login.html ## Ajouté sur la page login
 
-<a href="{{ url_for('register_page')}}">   # REDIRECTION SUR register.html
+<a href="{{ url_for('register_page')}}">   # REDIRECTION SUR register.html ## Ajouté sur la page register
 
 <a href="{{ url_for('index')}}">INDEX</a>  # REDIRECTION SUR index.html
 
 
----------------------- FORMULAIRE POUR LE REGISTER ----------------------
+---------------------- FORMULAIRE POUR LE REGISTER ---------------------- ## Ajouté --
 
 
 <form method="POST" action="/register">
@@ -35,7 +35,7 @@
 </form>
 
 
----------------------- FORMULAIRE POUR LE LOGIN ----------------------
+---------------------- FORMULAIRE POUR LE LOGIN ---------------------- ## Ajouté --
 
 
 <form method="POST" action="/login">
