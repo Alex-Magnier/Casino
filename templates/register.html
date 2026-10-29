@@ -15,25 +15,25 @@
 </head>
 <body>
     <header>
-        <a><img src="../static/imgs/casino.png" alt="Roulex's Casino Logo"></a>
+        <a href="{{ url_for('register_page')}}"> <img src="../static/imgs/casino.png" alt="Roulex's Casino Logo"></a>
     </header>
     <main>
         <div>
             <form method="POST" action="/register">
                 <fieldset>
                     <legend>Register</legend>
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name_register" required>
+                    <label for="username">Username *</label>
+                    <input type="text" id="username" name="username_register" required>
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password_register" required>
                     <div class="checkbox-container">
-                        <input type="checkbox" id="age" name="age" required>
-                        <label for="age">I confirm that I am over 18 years old.</label>
+                        <input type="checkbox" id="age" name="age_register" required>
+                        <label name="age_register" for="age">I confirm that I am over 18 years old.</label>
                     </div>
                     <button type="submit">Register</button>
-                    <p><a href="login.html">I already have an account.</a></p>
+                    <p><a href="{{ url_for('login_page')}}">I already have an account.</a></p>
                 </fieldset>
                 {% if nom %}
                     <div class="message">
