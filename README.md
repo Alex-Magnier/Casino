@@ -1,57 +1,80 @@
-<img src="/static/imgs/casino.png" width="200" alt="Texte alternatif">
-
 # Roulex Casino V0.1
-# INFORMATION : Le design et les mises en pages actuelles sont temporraires et en attente d'un design
 
-### Liste des idées globales en details du projet
+> **INFORMATION :** Le design et les mises en page actuelles sont temporaires et en attente d'une refonte graphique.
 
-* Outils possible à utiliser :
-    * __TKinter__ ou version __WEB__ avec __HTML5__ et __CSS3__
-    * __Python__
-    * __VS Code__
+## 🚀 Liste des idées globales et détails du projet
 
-Premier lancement :
-* Demande a l'utilisateur de choisir don pseudo
-    * Création d'un fichier __JSON__ qui contiendra toutes ses informations pour les stocker et les réutiliser à chaques lancement ou chaques jeux
-    <br>
-* Arrivée dans un menu ou l'utilisateur aura le choix entre :
-    * Boutique (À venir plus tard)
-    * Jouer qui contiendra des jeux comme :
-        - [ ] Pile ou Face
-        - [ ] Devine le nombre
-        - [ ] Black Jack (Plus tard)
-        - [ ] Jeux de la roulette
-        - [ ] ...
-    * Paramètres
-        - [ ] Changer son pseudo
-        - [ ] Réinitialiser le profil
-        - [ ] ...
-    * ...
+### Outils utilisés
 
-```Faire un fichier qui ouvre une documentation HTML5, CSS3 ou une page dédié si interface WEB direct avec toutes les régles des jeux, les mentions, remerciements et d'autres choses comme des sources etc...```
+* **Backend :** Python, Flask
+* **Frontend :** HTML5, CSS3, JavaScript
+* **Base de données / Stockage :** JSON (`utilisateurs.json`, `logs.json`)
+* **Environnement :** VS Code
 
+---
 
-## Exemple pour l'arborescence (pas la même si interface WEB HTML5 CSS3)
+### 🎮 Fonctionnalités
 
-        casino/
-        ├── main.py                  # Fichier principal : lance le menu
-        ├── menu.py                  # affichage du menu pricipal avec choix (Boutique, Jouer, Paramètres etc..)
-        ├── profil.py                # création / chargement / sauvegarde       du profil
-        ├── README.md                # Présentation
-        │
-        ├── jeux/
-        │   ├── roulette.py
-        │   ├── pile_ou_face.py
-        │   ├── blackjack.py
-        │   ├── machine_a_sous.py
-        │   ├── devine_le_nombre.py
-        │
-        ├── utils/
-        │   └── cartes.py            # Paquet / Carte, partagé par      blackjack et autre jeu
-        │
-        └──  data/                    # sauvegardes (ignorées par Git)
-            └── profil.json
+#### Premier lancement & Authentification
+* **Page de Connexion / Inscription (`index.html`) :** Permet à l'utilisateur de se connecter ou de créer un compte.
+* **Gestion des Profils (`register_py.py`, `login_py.py`) :** Création et vérification automatisées dans `data/utilisateurs.json`.
+* **Traçabilité (`logs.py`) :** Historique des actions enregistré dans `data/logs.json`.
 
-# À compléter !
+#### Menu principal & Profil (`index.html`, `profile.html`)
+L'utilisateur a accès aux sections suivantes :
 
-```By RouyouteDev & Alex.```
+* **Boutique** *(À venir plus tard)*
+* **Jouer** (Jeux disponibles ou en cours de développement) :
+  * [ ] Pile ou Face
+  * [ ] Devine le nombre
+  * [ ] Blackjack *(Prévu)*
+  * [ ] Roulette
+  * [ ] ...
+* **Paramètres / Profil (`profile_py.py`)** :
+  * [x] Changer son pseudo
+  * [x] Changer son mot de passe
+  * [ ] Réinitialiser le profil
+  * [ ] ...
+* **Login / Register (`login_py.py` et `register_py.py` )** :
+  * [x] S'enregistrer [nom, pseudo, mdp]
+  * [x] Se connecter  [pseudo, mdp]
+> **Note :** Une page dédiée regroupant les règles des jeux, les mentions légales, les remerciements et les sources est prévue.
+
+---
+
+## 📁 Arborescence réelle du projet
+
+```text
+Casino/
+├── app.py                 # Application principale Flask
+├── POUR LE FRONTEND.txt   # Instruction pour le frontend 
+├── README.md              # Ce fichier markdown            
+│
+├── server/                # Modules Python
+│   │
+│   ├── login_py.py        # Gestion de la connexion
+│   ├── register_py.py     # Gestion de l'inscription
+│   ├── profile_py.py      # Gestion des paramètres de profil
+│   └── logs.py            # Script de gestion des journaux d'événements
+│
+├── static/                # Fichiers statiques
+│   │
+│   ├── css/               # Feuilles de style CSS
+│   └── imgs/              # Ressources (images, logos)
+│
+├── templates/             # Vues HTML (Jinja2)
+│   │
+│   ├── index.html         # Page d'index 
+│   ├── login.html         # Page de login
+│   ├── register.html      # Page d'enregistrement 
+│   └── profile.html       # Page de profile
+│
+└── data/                  # Base de données locales
+    ├── utilisateurs.json  # Données des utilisateurs 
+    └── logs.json          # Historique des événements
+```
+
+---
+
+*Développé par RouyouteDev & Alex.*<br>
+*Designé par WattGab & Meitsu*
