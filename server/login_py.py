@@ -20,16 +20,14 @@ def login_func():
                 users = json.load(f)
 
         # parcours de la liste des utilisateurs
-        # structure elt = {"username":"str","password":"str", "coin":"int"}
+        # structure elt = {"username":"str","password":"str","name": "str", "coin":"int"}
         msg = False
         for elt in users:
             if elt['username'] == username_login and elt['password'] == password_login:
-                COIN = elt['coin']
-                USERNAME = elt['username']
+                temp = elt
                 msg = True
         if msg == True:
             logs.logs_func(f"{username_login} logged")
-            return f"Loggin sucessfull {username_login} !", USERNAME, COIN
+            return f"Loggin sucessfull {username_login} !", temp
         if msg == False:
-            print(f"{username_login} failed !")
-            return "Login failed, please try again.", None, None
+            return "Login failed, please try again.", None

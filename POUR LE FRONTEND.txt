@@ -1,14 +1,15 @@
 ---------------------- LIENS DE REDIRECTION ----------------------
 
+<a href="{{ url_for('index')}}">INDEX</a>            # REDIRECTION SUR index.html
 
-<a href="{{ url_for('login_page')}}"></a>  # REDIRECTION SUR login.html ## Ajouté sur la page login
+<a href="{{ url_for('login_page')}}"></a>            # REDIRECTION SUR login.html
 
-<a href="{{ url_for('register_page')}}">   # REDIRECTION SUR register.html ## Ajouté sur la page register
+<a href="{{ url_for('register_page')}}">             # REDIRECTION SUR register.html
 
-<a href="{{ url_for('index')}}">INDEX</a>  # REDIRECTION SUR index.html
+<a href="{{ url_for('profile_page')}}">PROFIL</a>    # REDIRECTION SUR profile.html
 
 
----------------------- FORMULAIRE POUR LE REGISTER ---------------------- ## Ajouté --
+---------------------- FORMULAIRE POUR LE REGISTER ----------------------
 
 
 <form method="POST" action="/register">
@@ -35,7 +36,7 @@
 </form>
 
 
----------------------- FORMULAIRE POUR LE LOGIN ---------------------- ## Ajouté --
+---------------------- FORMULAIRE POUR LE LOGIN ----------------------
 
 
 <form method="POST" action="/login">
@@ -55,3 +56,29 @@
     <p>Don't have an account? <a href="{{ url_for('register_page')}}">Register here.</a></p>
 </form>
 
+
+---------------------- FORMULAIRE POUR LE PROFIL ----------------------
+
+
+<form method="POST" action="/change_info">
+    <fieldset>
+        <legend>Change settings</legend>
+        <label for="username">Username: </label>
+        <input type="text" id="username" name="username_change" placeholder="{{ username}}">
+
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name_change" placeholder="{{ name }}">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password_change" placeholder="********">
+        <input type="password" id="password" name="password_change_confirm" placeholder="confirm password">
+
+        <button type="submit">Change</button>
+    </fieldset>
+</form>
+
+
+---------------------- AFFICHAGE POUR LE PROFIL ----------------------
+
+
+<p> USERNAME: {{ username }} NAME: {{ name }} COINS: {{ coin }}</p>
