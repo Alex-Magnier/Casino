@@ -21,7 +21,6 @@ def logs_func(char :str):
 
     with open(filepath, "r", encoding="utf-8") as f:
         log = json.load(f)
-    print (log)
     res =[]
     char = [f"{now} {char}"]
     for elt in log:

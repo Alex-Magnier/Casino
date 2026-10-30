@@ -1,0 +1,22 @@
+<p>
+    USERNAME: {{ username }} NAME: {{ name }} COINS: {{ coin }}
+</p><hr>
+
+<form method="POST" action="/change_info">
+    <fieldset>
+        <legend>Change settings</legend>
+        <label for="username">Username: </label>
+        <input type="text" id="username" name="username_change" placeholder="{{ username}}">
+
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name_change" placeholder="{{ name }}">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password_change" placeholder="********">
+        <input type="password" id="password" name="password_change_confirm" placeholder="confirm password">
+
+        <button type="submit">Change</button>
+    </fieldset>
+</form>
+
+<a href="{{ url_for('index')}}">-> INDEX</a>
